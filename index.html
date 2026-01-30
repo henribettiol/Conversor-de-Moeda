@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
+    <title>Conversor de Real</title>
+</head>
+<body>
+    <h1>Conversor De Real (Buiu)</h1>
+    <img src="./assets/casadamoeda.png" alt="Icone-casa-da-moeda" class="casa">
+
+    <main>
+        <label>
+            Converter <b>de</b>
+            <select>
+                <option>R$ Real Brasileiro</option>
+            </select>
+        </label>
+
+        <label>
+            Converter <b>para</b>
+            <select id="moedaDestino">
+                <option value="dolar">Dólar</option>
+                <option value="euro">Euro</option>
+            </select>
+        </label>
+
+        <label>
+            Valor
+            <input id="valor" placeholder="Digite o valor (não digite 1746)" type="number" autocomplete="off">
+        </label>
+
+        <button id="botao">Converter</button>
+
+        <section>
+            <div class="currency-box">
+                <img src="./assets/brasil3.png" alt="Icone-Brasil" class="icone">
+                <p class="currency" id="mOrigem">Real</p>
+                <p class="currency-value" id="valorOrigem">R$ 0,00</p>
+            </div>
+            
+            <img src="./assets/seta2.png" alt="Icone-Seta" class="icone arrow-img">
+
+            <div class="currency-box">
+                <img src="./assets/globo.png" alt="Icone-Globo" class="icone" id="icone">
+                <p class="currency" id="mDestino">$$$</p>
+                <p class="currency-value" id="valorDestino">0,00</p>
+            </div>
+        </section>
+
+    </main>
+
+    <img 
+      id="imagemSecreta"
+      src="./assets/buiu.jpeg"
+      alt="Banner secreto"
+    >
+
+</body>
+</html>
