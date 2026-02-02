@@ -14,6 +14,9 @@ const imagemSecreta = document.getElementById("imagemSecreta")
 
 const dolar = 5.24;
 const euro = 6.23;
+const libra = 7.18;
+const bitcoin = 408402.56;
+
 
 function converter() {
     if (moedaDestino.value === "dolar") {
@@ -31,14 +34,27 @@ function converter() {
         valorDestino.innerText = `€ ${valorConvertido.toFixed(2)}`
         icone.src = "./assets/euro2.png"
     }
+    else if (moedaDestino.value === "libra") {
+        const valorConvertido = (Number(valor.value) / libra)
+        mOrigem.innerText = "Real"
+        valorOrigem.innerText = `R$ ${Number(valor.value).toFixed(2)}`
+        mDestino.innerText = "Libra"
+        valorDestino.innerText = `£ ${valorConvertido.toFixed(2)}`
+        icone.src = "./assets/libra.png"
+
+    }
+    else if (moedaDestino.value === "bitcoin") {
+        const valorConvertido = (Number(valor.value) / bitcoin)
+        mOrigem.innerText = "Real"
+        valorOrigem.innerText = `R$ ${Number(valor.value).toFixed(2)}`
+        mDestino.innerText = "Bitcoin"
+        valorDestino.innerText = `₿ ${valorConvertido.toFixed(6)}`
+        icone.src = "./assets/bitcoin.png"
+    }
 };
 
 function atualizarIcone() {
-    if (moedaDestino.value === 'dolar') {
-        icone.src = "./assets/eua2.png"
-    } else if (moedaDestino.value === 'euro') {
-        icone.src = "./assets/euro2.png"
-    }
+    converter();
 }
 
 
