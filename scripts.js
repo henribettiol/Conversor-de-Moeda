@@ -33,6 +33,16 @@ function converter() {
     }
 };
 
+function atualizarIcone() {
+    if (moedaDestino.value === 'dolar') {
+        icone.src = "./assets/eua2.png"
+    } else if (moedaDestino.value === 'euro') {
+        icone.src = "./assets/euro2.png"
+    }
+}
+
+
+moedaDestino.addEventListener("change", atualizarIcone);
 botao.addEventListener("click", converter);
 
 function verificarValorSecreto() {
